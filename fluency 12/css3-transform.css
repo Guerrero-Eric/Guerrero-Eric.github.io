@@ -1,0 +1,39 @@
+.block{ width: 55px; height: 55px; background-color: rgb(245, 243, 243);}
+
+div #transformDIV:hover {
+    transition-duration: 2s, 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s, 1s;
+    transform: rotate(360deg)}
+
+    div #transformDIV2:hover {
+        transition-duration: 2s, 1s;
+        transition-timing-function: ease;
+        transition-delay: 0s, 1s;
+       transform: skew(.312rad);}
+
+       div #transformDIV3:hover {
+        transition-duration: 2s, 1s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0s, 1s;
+        transform: translate3d(305px, -435px, 100px);}
+
+        div #transformDIV3 {
+            transition-duration: 2s, 1s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s, 1s;
+            transform: translate3d(0px, 0px, 0px);}
+
+    div #transformDIV4:hover {
+        transition-duration: 2s, 1s;
+        transition-timing-function: ease-in;
+        transition-delay: 0s, 1s;
+        transform: translate3d(25px, -205px, 100px);}
+
+
+    div #transformDIV4:hover {
+        transform: rotateY(180deg);
+        background-color: rgb(241, 30, 206);
+        width: 57px; height: 75px;}
+
+

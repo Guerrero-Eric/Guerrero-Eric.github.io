@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CIT 261 Fluency 2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href = "../css/fluency_stylesheet.css" type = "text/css" rel = "stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+
+<body>
+<!-- Navbar -->
+<div class="topnav">
+    <a href="../fluency 1/fluency_1.html">Fluency 1</a>
+    <a href="../fluency 2/fluency_2.html">fluency 2</a>
+    <a href="../fluency 3/fluency_3.html">fluency 3</a>
+    <a href="../fluency 4/fluency_4.html">fluency 4</a>
+    <a href="../fluency 5/fluency_5.html">Fluency 5</a>
+    <a href="../fluency 6/fluency_6.html">fluency 6</a>
+    <a href="../fluency 7/fluency_7.html">fluency 7</a>
+    <a href="../fluency 8/fluency_8.html">fluency 8</a>
+    <a href="../fluency 9/fluency_9.html">Fluency 9</a>
+    <a href="../fluency 10/fluency_10.html">fluency 10</a>
+    <a href="../fluency 11/fluency_11.html">fluency 11</a>
+    <a href="../fluency 12/fluency_12.html">fluency 12</a>
+    <a href="../fluency 13/fluency_13.html">fluency 13</a>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo"><a href="../index.html">CIT 261</a></h1>
+    <p class="w3-xlarge">Object Creation Functions, Inheritance, Properties, Methods, Instantiation</p>
+</header>
+
+<!--Navrow-->
+<div class="row">
+    <div class="col-3 col-s-3 menu">
+        <ul>
+            <a href="#object"><li>Object Creation</li></a>
+            <a href="#inheritance"><li>Inheritance</li></a>
+            <a href="#properties"><li>Properties</li></a>
+            <a href="#method"><li>Method</li></a>
+            <a href="#instantiation"><li>Instantiation</li></a>
+        </ul>
+    </div>
+
+<div class="col-6 col-s-9">
+<!-- First Grid -->
+<section id="object"></section>
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+              <h1>Object</h1>
+              <p> An object, is a reference data type. <br>
+                  An object in javascript can represent anything from a single valve such as a name, number, and boolean.
+              </p>
+                <div class="code">
+                  <p>var person = { firstName:"John", lastName:"Doe", age:50, eyeColor:"blue" };</p>
+                </div>
+              <h5 class="w3-padding-32"> Object Creation Function</h5>
+                <p>The Object.create() creates a new object, using an existing object as the prototype of 
+                    the newly created object. </p>
+              <div class="w3-text-grey">
+          
+              </div>
+              <div class="code">
+                  <pre>
+                    function animal() {  
+                      this.name = 'Scar'; 
+                    } 
+                    
+                    function
+                    tiger() { 
+                      animal.call(this); 
+                    } 
+                      
+                    tiger.prototype = Object.create(animal.prototype);  
+                    const example = new tiger();
+                  </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+        If we compile and run the above program, then it will produce the following result −
+      <div class="w3-margin w3-xlarge" id="objectCall"> </div>
+    </div>
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <section id="inheritance"></section>
+          <div class="w3-twothird">
+            <h1>Inheritance</h1>
+            <h5 class="w3-padding-32"> JavaScript uses prototype based inheritance.</h5>
+      
+            <div class="w3-text-grey">
+                <p>Every object has a <b>prototype</b>,
+                  and when a method of the object is called then JavaScript tries to find the right
+                  function to execute from the prototype object.
+                </p>
+            </div>
+            <pre class="code">
+                var animalA = function() {}; 
+
+                animalA.prototype.initialize = function(type, age)
+                {
+                    this.type = type;
+                    this.age = age;
+                }
+                
+                
+                var animalB = function() {};
+                animalB.prototype = new animalA();
+                
+                animalB.prototype.skill = function(subject)
+                {
+                    document.getElementById('inherit').innerHTML= 
+                    "This " + this.type + " is " + this.age + 
+                    " years old, and it just learned " + subject;
+                }
+                
+                var me = new animalB();
+                
+                me.initialize("Tiger", 2);
+                me.skill("jump.");
+            </pre>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <div class="w3-margin w3-xlarge"> 
+           
+      </div>
+    <h3>Output:</h3>
+    <p id="inherit"></p>
+    <script>inheritanceFunction();</script>
+  </div>
+
+  <!-- Third Grid -->
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+              <section id="properties"></section>
+            <h1>Properties</h1>
+            <h5 class="w3-padding-32">
+              Properties are the values associated with a JavaScript object.
+              A JavaScript object is a collection of unordered properties.
+              Properties can usually be changed, added, and deleted, but some are read only.
+              </h5>
+            <div class="w3-text-grey">
+                <p>There are two different ways to access an object property:</p><br>
+                <p>objectName.property</p>
+                <p>objectName["property"]</p>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <pre class="w3-margin w3-xlarge">  </pre>
+    </div>
+
+    <!-- Fourth Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+              <div class="w3-twothird">
+                  <section id="method"></section>
+                <h1>Methods</h1>
+                <h5 class="w3-padding-32">JavaScript methods are actions that can be performed on objects.</h5>
+                <p>You access an object method with the following syntax:</p>
+                <p>objectName.methodName()</p><br>
+                <div class="w3-text-grey">
+                <p>This example accesses the fullName() method of a person object:</p>
+                </div>
+                <pre class="code">  
+                    name = person.fullName();          
+                </pre>
+              </div>
+            </div>
+        </div>
+          
+        <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+          <div class="w3-margin w3-xlarge">        
+          </div>
+        </div>
+
+        <!-- Fifth Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+              <div class="w3-twothird">
+                  <section id="instantiation"></section>
+                <h1>Instantiation</h1>
+                <h5 class="w3-padding-32"> Instantiation patterns are different methods to create objects.</h5>
+                <p>source: medium.com</p>
+                <div class="w3-text-grey">
+                    <pre> 
+                        Instantiation patterns are ways to create something in JavaScript. JavaScript provides four different methods to create objects. 
+                        Regardless of which method used, every method will provide the following functionality: 
+                        
+                        Create an object 
+                        Create methods and properties for that object 
+                        
+                        The four instantiation patterns in JavaScript: Functional, Functional-shared, Prototypal, and Pseudoclassical. 
+                      </pre>
+                </div>
+              </div>
+            </div>
+        </div>
+          
+        <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+          <div class="w3-margin w3-xlarge">  
+          </div>
+        </div>
+</div>
+</div>
+<div class="footer">
+  <p> <a href="../index.html">CIT 261</a> <br>
+    Object Creation Functions, Inheritance, Properties, Methods, Instantiation
+  </p>
+</div>
+<script type="text/javascript" src="fluency_2.js"></script>
+</body>
+</html>

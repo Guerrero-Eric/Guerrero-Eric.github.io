@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CIT 261 Fluency 11</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href = "../css/fluency_stylesheet.css" type = "text/css" rel = "stylesheet">
+<link href = "css3-transitions.css" type = "text/css" rel = "stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+.block{ width: 400px; height: 150px; background-color: rgb(182, 178, 178); border: 3px solid black;}
+div #transformDIV {transform: rotate(30deg)}
+div #transformDIV2 {transform: translate3d(25px, -25px, 70px);}
+</style>
+
+</head>
+
+<body>
+<!-- Navbar -->
+<div class="topnav">
+        <a href="../fluency 1/fluency_1.html">Fluency 1</a>
+        <a href="../fluency 2/fluency_2.html">fluency 2</a>
+        <a href="../fluency 3/fluency_3.html">fluency 3</a>
+        <a href="../fluency 4/fluency_4.html">fluency 4</a>
+        <a href="../fluency 5/fluency_5.html">Fluency 5</a>
+        <a href="../fluency 6/fluency_6.html">fluency 6</a>
+        <a href="../fluency 7/fluency_7.html">fluency 7</a>
+        <a href="../fluency 8/fluency_8.html">fluency 8</a>
+        <a href="../fluency 9/fluency_9.html">Fluency 9</a>
+        <a href="../fluency 10/fluency_10.html">fluency 10</a>
+        <a href="../fluency 11/fluency_11.html">fluency 11</a>
+        <a href="../fluency 12/fluency_12.html">fluency 12</a>
+        <a href="../fluency 13/fluency_13.html">fluency 13</a>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">CIT 261</h1>
+    <p class="w3-xlarge">Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library)</p>
+</header>
+
+<!--Navrow-->
+<div class="row">
+
+    <div class="col-3 col-s-3 menu">
+        <ul>
+            <a href="#transition"><li>css3-transitions</li></a>
+        
+        </ul>
+    </div>
+
+
+
+    <div class="col-6 col-s-9">
+
+        <!-- first Grid -->
+        <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-twothird">
+                        <section id="transition"></section>
+                    <h1>CSS Transitions</h1>
+                    <h5 class="w3-padding-32">
+                        CSS transitions create a way to control the speed that CSS properties change. <br>
+                        This allows us to change things over time instead of having changes take place instantly. 
+                        <br>
+                    </h5>
+                   <div class="code">
+                       <div class="box"> </div>
+                       <div class="box2"> </div>
+                       <div class="box3"></div>
+                       <button>Button</button>
+                   </div>
+                    <div class="w3-text-grey"><br>
+                    </div>
+                </div>
+        
+            <br>
+            <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+                    <p> 
+                        The transition-timing-function property specifies the speed curve of the transition effect. <br>
+                         <br>
+                    </p>
+                    <ul>
+                        <li>ease: the default value, increases in velocity towards the middle of the animation, slowing back down at the end.</li>
+                        <li>linear: animates at an even speed</li>
+                        <li>ease-in: slow at the beginning, fast/abrupt at the end</li>
+                        <li>ease-out: fast/abrupt at the beginning, slow at the end</li>
+                    </ul>
+                        <pre class="code">
+                    .examples {
+
+                        transition-timing-function: linear;
+                        transition-timing-function: cubic-bezier(0, 0, 1, 1);
+                    
+                        transition-timing-function: ease;
+                        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+                    
+                        transition-timing-function: ease-in-out;
+                        transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    
+                        transition-timing-function: ease-in;
+                        transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+                    
+                        transition-timing-function: ease-out;
+                        transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+                    
+                    }
+                        </pre> <br>
+                        <div class="w3-padding-32 w3-light-grey">
+                                <img class="chocobo" src="../images/chocobo.gif" onclick="this.style.right='450px'">
+                        </div>
+                    </div>
+                </div> </div>
+        <div class="w3-container w3-black w3-center w3-padding-64">
+            <div class="w3-margin w3-xlarge">
+                   
+            </div> 
+        </div>   
+        
+             
+            
+    </div>
+
+</div>
+
+<div class="footer">
+    <p> CIT 261<br>
+    Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library)
+    </p>
+</div>
+
+</body>
+</html>

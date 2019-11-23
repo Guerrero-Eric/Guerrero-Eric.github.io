@@ -1,0 +1,97 @@
+.container {
+height: 125px;
+width: 250px;
+}
+
+button {
+    border: 0;
+    background: cadetblue;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 rgb(35, 35, 44);
+    color: black;
+    cursor: pointer;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 12px 20px 20px;
+    line-height: 45px;
+    position: relative;
+    top: -50px;
+    transition: all .1s linear;
+}
+
+button:active {
+    box-shadow: 0 2px 0 rgb(125, 125, 170);
+    transform: translateY(30px);
+}
+
+.box {
+    background: #9e8563;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 95px;
+    width: 95px;
+    line-height: 95px;
+    text-align: center;
+    transition-property: background, border-radius;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    display:inline-block;
+}
+
+.box2 {
+    background: #89c992;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 95px;
+    width: 95px;
+    line-height: 95px;
+    text-align: center;
+    transition-property: background, border-radius;
+    transition-duration: 2s, 1s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s, 1s;
+    display:inline-block;
+
+}
+
+.box3 {
+    background: #2b788b;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 95px;
+    width: 95px;
+    line-height: 95px;
+    text-align: center;
+    transition-property: background, border-radius;
+    transition-duration: 2s, 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s, 1s;
+    display:inline-block;
+
+}
+
+.box:hover {
+    background: orangered;
+    border-radius: 50%;
+}
+
+.box2:hover {
+    background: rgb(25, 41, 30);
+    border-radius: 50%;
+}
+
+.box3:hover {
+    background: rgb(94, 107, 223);
+    border-radius: 50%;
+}
+
+
+.chocobo {
+    position: relative;
+    cursor: pointer;
+    width: 177px;
+    height: 160px;
+    right: 0;
+    transition: right 5s cubic-bezier(0, 0, 1, 1);
+  }

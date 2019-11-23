@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CIT 261 Fluency 3</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href = "../css/fluency_stylesheet.css" type = "text/css" rel = "stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+
+<body>
+<!-- Navbar -->
+<div class="topnav">
+    <a href="../fluency 1/fluency_1.html">Fluency 1</a>
+    <a href="../fluency 2/fluency_2.html">fluency 2</a>
+    <a href="../fluency 3/fluency_3.html">fluency 3</a>
+    <a href="../fluency 4/fluency_4.html">fluency 4</a>
+    <a href="../fluency 5/fluency_5.html">Fluency 5</a>
+    <a href="../fluency 6/fluency_6.html">fluency 6</a>
+    <a href="../fluency 7/fluency_7.html">fluency 7</a>
+    <a href="../fluency 8/fluency_8.html">fluency 8</a>
+    <a href="../fluency 9/fluency_9.html">Fluency 9</a>
+    <a href="../fluency 10/fluency_10.html">fluency 10</a>
+    <a href="../fluency 11/fluency_11.html">fluency 11</a>
+    <a href="../fluency 12/fluency_12.html">fluency 12</a>
+    <a href="../fluency 13/fluency_13.html">fluency 13</a>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo"><a href="../index.html">CIT 261</a></h1>
+    <p class="w3-xlarge">JSON Parse, Stringify</p>
+</header>
+
+<!--Navrow-->
+<div class="row">
+    <div class="col-3 col-s-3 menu">
+        <ul>
+            <a href="#parse"><li>Json Parse</li></a>
+            <a href="#stringify"><li>Stringify</li></a>
+        </ul>
+    </div>
+
+
+<div class="col-6 col-s-9">
+<!-- First Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+              <section id="parse"></section>
+            <h1>Json Parse</h1>
+            <h5 class="w3-padding-32">JSON.parse() method converts a JSON string representation to a JavaScript value (JSON object).</h5>
+            <div class="w3-text-grey">
+                <p>Parameters: It accepts two parameter which are listed below:</p>
+                <p>string: It is required parameter and it contains string which is written in JSON format.</p>
+                <p>function: It is optional parameter and used to transform result.</p>
+            </div>
+            <pre class="code">
+              var txt = 
+              '{
+                "name" : "Adam" , 
+                "email" : "adm@gmail.com" , 
+                "contact" : "555-555-5555"
+              }';
+        
+              var parsedtxt = JSON.parse(txt);
+        
+              document.getElementById('parsed').innerHTML =
+               parsedtxt.name + ", " + parsedtxt.email;
+              
+            </pre>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <div class="w3-margin w3-xlarge"> </div>
+      <h3>Output:</h3>
+      <p id="parsed"></p>
+    </div>
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+              <section id="stringify"></section>
+            <h1>Stringify</h1>
+            <h5 class="w3-padding-32">The JSON.stringify() method converts a JavaScript object or value to a JSON string.</h5>
+      
+            <div class="w3-text-grey">
+                <p>Parameters: It accepts three parameters which are specified below-</p>
+                <br>
+                <p>value: It is the value which is to be converted into a JSON string.</p>
+                <p>replacer: It is an optional parameter. This parameter value can be an altering function or an array used as a selected filter for the stringify. 
+                  If the value is empty or null then all properties of an object included in a string. </p>
+                <p>space: It is also an optional parameter. This argument is used to control spacing in the final string generated using JSON.stringify() function.
+                   It can be number or a string if it is a number than the specified number of spaces indented to the final string and if it is a string then that string is (upto 10 characters) used for indentation.</p>
+                <p>Return Value: It returns a string for a given value.</p>
+            </div>
+            <pre class="code">
+                var books = {
+                  title : 'javascript novice to ninja' ,
+                  year : "2017" ,
+                  edition : 2
+                };
+          
+              var stringifytxt = JSON.stringify(books);
+          
+              document.getElementById('stringify').innerHTML = 
+                stringifytxt;
+            </pre>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <div class="w3-margin w3-xlarge"> 
+      </div>
+    <h3>Output:</h3>
+    <p id="stringifyCall"></p>
+  </div>
+
+</div>
+
+<footer>
+    <div class="footer">
+      <div >
+        <p>
+            <a href="../index.html">CIT 261</a><br>
+          fluency 3: JSON Parse, Stringify 
+          <br>	  
+        </p>
+      </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="fluency_3.js"></script>
+</body>
+</html>

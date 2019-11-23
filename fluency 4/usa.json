@@ -1,0 +1,64 @@
+{ "cities" :
+    [
+        {
+            "city": "New York", 
+            "population": "8405837", 
+            "rank": "1", 
+            "state": "New York"
+        }, 
+        {
+            "city": "Los Angeles", 
+            "population": "3884307", 
+            "rank": "2", 
+            "state": "California"
+        }, 
+        {
+            "city": "Chicago", 
+            "population": "2718782", 
+            "rank": "3", 
+            "state": "Illinois"
+        }, 
+        {
+            "city": "Houston", 
+            "population": "2195914", 
+            "rank": "4", 
+            "state": "Texas"
+        }, 
+        {
+            "city": "Philadelphia", 
+            "population": "1553165", 
+            "rank": "5", 
+            "state": "Pennsylvania"
+        }, 
+        {
+            "city": "Phoenix", 
+            "population": "1513367", 
+            "rank": "6", 
+            "state": "Arizona"
+        }, 
+        {
+            "city": "San Antonio", 
+            "population": "1409019", 
+            "rank": "7", 
+            "state": "Texas"
+        }, 
+        {
+            "city": "San Diego", 
+            "population": "1355896", 
+            "rank": "8", 
+            "state": "California"
+        }, 
+        {
+            "city": "Dallas", 
+            "population": "1257676", 
+            "rank": "9", 
+            "state": "Texas"
+        }, 
+        {
+            "city": "San Jose", 
+            "population": "998537", 
+            "rank": "10", 
+            "state": "California"
+        }
+    ]
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CIT 261 Fluency 4</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href = "../css/fluency_stylesheet.css" type = "text/css" rel = "stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+</style>
+</head>
+
+<body>
+  <!-- Navbar -->
+<div class="topnav">
+    <a href="../fluency 1/fluency_1.html">Fluency 1</a>
+    <a href="../fluency 2/fluency_2.html">fluency 2</a>
+    <a href="../fluency 3/fluency_3.html">fluency 3</a>
+    <a href="../fluency 4/fluency_4.html">fluency 4</a>
+    <a href="../fluency 5/fluency_5.html">Fluency 5</a>
+    <a href="../fluency 6/fluency_6.html">fluency 6</a>
+    <a href="../fluency 7/fluency_7.html">fluency 7</a>
+    <a href="../fluency 8/fluency_8.html">fluency 8</a>
+    <a href="../fluency 9/fluency_9.html">Fluency 9</a>
+    <a href="../fluency 10/fluency_10.html">fluency 10</a>
+    <a href="../fluency 11/fluency_11.html">fluency 11</a>
+    <a href="../fluency 12/fluency_12.html">fluency 12</a>
+    <a href="../fluency 13/fluency_13.html">fluency 13</a>
+</div>
+  
+  <!-- Header -->
+  <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+      <h1 class="w3-margin w3-jumbo">CIT 261</h1>
+      <p class="w3-xlarge">Using XMLHTTPRequest to Consume a JSON Web Service</p>
+  </header>
+
+<!--Navrow-->
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+      <ul>
+          <a href="#part1"><li>part1</li></a>
+          <a href="#part2"><li>part2</li></a>
+      </ul>
+  </div>
+  
+
+  <div class="col-6 col-s-9">
+    <!-- First Grid -->
+        <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+              <div class="w3-twothird">
+                  <section id="part1"></section>
+                    <h1>JSON</h1>
+                    <p>JSON stands for JavaScript Object Notation. It is a syntax for soring and exchanging data. <br>
+                      JSON is essentially text, written in JavaScript object notation. It is a lightweight data interchange format that is self describing and easy to understand. <br>
+                      It also has the advantage of being language independant so it can be read and used by ANY programming language. </p> <br>
+                    <p>XMLHTTPRequest</p>
+                    <pre class="code">
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                      if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("data").innerHTML = this.responseText;
+                      }
+                    };
+                    if (document.getElementById('usa').checked) {
+                      xhttp.open("GET", "usa.json", true);
+                      xhttp.send();
+                    }
+                </pre>
+                      <div class="w3-text-grey">
+                      <label class="container"><p><span style="color: rgb(72, 72, 255);">click </span> to display json file</p>
+                        <input type="radio" name="country" id="usa" onclick="GetCountry()">
+                      </label> 
+                </div>
+                <pre class="code" id="data"></pre>
+              </div>
+            </div>
+        </div>
+        <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+            <div class="w3-margin w3-xlarge">         
+            </div>
+        </div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+              <section id="part2"></section>
+            <h1>Part 2: </h1>
+            <h5 class="w3-padding-32"> JSON file</h5>
+            <div class="w3-text-grey">
+               <label> File/URL:
+                    <input type="text" name="file" id="file" placeholder="file1.json" >
+                </label> 
+                <br>
+                <br>		
+                <input type="button" name="submit" value="submit" id="submit" onclick="readFile()">
+                <br>
+                <p>Ex. file1.json or file2.json</p>
+            </div>
+            <pre class="code" id="filedata"></pre>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+        <div class="w3-margin w3-xlarge">  
+        </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <div class="footer">
+    <div >
+      <p>
+        CS 261<br>
+        <a href="https://byui.instructure.com/courses/50190/assignments/1416969?module_item_id=3981552">
+        fluency 4: Using XMLHTTPRequest to Consume a JSON Web Service 
+        </a><br>	  
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="fluency_4.js"></script>
+</body>
+</html>
