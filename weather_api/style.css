@@ -1,19 +1,123 @@
-/* CSS files add styling rules to your content */
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
 
-html, body{
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  body{
-    background-size: cover;
-    background-position: center;
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgb(47,150,163),rgb(48, 62, 143));
     font-family: sans-serif;
     color: white;
-    text-shadow: 1px 1px 10px rgba( 0, 0, 0, 0.4 );  
-  }
-  
-  @media only screen and (min-width: 600px) {
+}
+
+.container{
+    /*width: 300px;*/    
+    background-color: #FFF;
+    
+    display: block;
+    margin: 0 auto;
+    
+    border-radius: 10px;
+    padding-bottom : 50px;
+}
+
+.app-title{
+    /*width: 300px;*/
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+}
+
+.app-title p{
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    color: #293251;
+}
+
+.notification{
+    background-color: #f8d7da;
+    display: none;
+}
+
+.notification p{
+    color: #721c24;
+    font-size: 1.2em;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.weather-container{
+    /*width: 300px;*/
+    height: 260px;
+    background-color: #F4F9FF;
+}
+
+.weather-icon{
+    width: 300px;
+    height: 128px;
+}
+
+.weather-icon img{
+    display: block;
+    margin: 0 auto;
+}
+
+.temperature-value{
+    width: 300px;
+    height:60px;
+}
+
+.temperature-value p{
+    padding: 0;
+    margin: 0;
+    color: #293251;
+    font-size: 4em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.temperature-value p:hover{
+    
+}
+
+.temperature-value span{
+    color: #293251;
+    font-size: 0.5em;
+}
+
+.temperature-description{
+    
+}
+
+.temperature-description p{
+    padding: 8px;
+    margin: 0;
+    color: #293251;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.location{
+    
+}
+
+.location p{
+    margin: 0;
+    padding: 0;
+    color: #293251;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+
+@media only screen and (max-width: 400px) {
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
     .col-s-3 {width: 25%;}
@@ -28,17 +132,32 @@ html, body{
     .col-s-12 {width: 100%;}
   }
   
-  @media only screen and (min-width: 768px) {
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 75%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 16.66%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 75%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
   }
+
+    @media only screen and (min-width: 961px) {
+        .col-l-1 {width: 8.33%;}
+        .col-l-2 {width: 16.66%;}
+        .col-l-3 {width: 25%;}
+        .col-l-4 {width: 33.33%;}
+        .col-l-5 {width: 41.66%;}
+        .col-l-6 {width: 75%;}
+        .col-l-7 {width: 58.33%;}
+        .col-l-8 {width: 66.66%;}
+        .col-l-9 {width: 75%;}
+        .col-l-10 {width: 83.33%;}
+        .col-l-11 {width: 91.66%;}
+        .col-l-12 {width: 100%;}
+    }

@@ -1,4 +1,5 @@
-var cityName = "";
+// Tutorial by http://youtube.com/CodeExplained
+// api key : 82005d27a116c2880c8f0fcb866998a0
 
 // SELECT ELEMENTS
 const iconElement = document.querySelector(".weather-icon");
@@ -26,7 +27,7 @@ if('geolocation' in navigator){
     notificationElement.style.display = "block";
     notificationElement.innerHTML = "<p>Browser doesn't Support Geolocation</p>";
 }
-/*
+
 // SET USER'S POSITION
 function setPosition(position){
     let latitude = position.coords.latitude;
@@ -34,19 +35,17 @@ function setPosition(position){
     
     getWeather(latitude, longitude);
 }
-*/
+
 // SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
 function showError(error){
     notificationElement.style.display = "block";
     notificationElement.innerHTML = `<p> ${error.message} </p>`;
 }
 
-function getWeather(cityName){
-    // API KEY 
-    const key = "ef4d047f0140df5f44f2c48843408179";
-
-    var api = "https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&units=metric&apikey="+key;  //API Request Link
-
+// GET WEATHER FROM API PROVIDER
+function getWeather(latitude, longitude){
+    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    
     
     fetch(api)
         .then(function(response){
