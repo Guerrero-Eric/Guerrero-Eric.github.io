@@ -81,7 +81,6 @@ body {
 
 .row::after {
   content: "";
-  clear: both;
   display: block;
 }
 
