@@ -30,13 +30,7 @@ body {
     to { background-position: -400px 0; }
 }
 
-#icon{
-    -webkit-animation: 1500ms pulsate infinite alternate ease-in-out;
-  -moz-animation: 1500ms pulsate infinite alternate ease-in-out;
-  -ms-animation: 1500ms pulsate infinite alternate ease-in-out;
-  -o-animation: 1500ms pulsate infinite alternate ease-in-out;
-  animation: 1500ms pulsate infinite alternate ease-in-out;
-}
+
 
 .weather {
   width: 75%;
