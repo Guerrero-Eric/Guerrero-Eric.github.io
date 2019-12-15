@@ -47,7 +47,7 @@ body {
 .weather {
   width: 75%;
   height: 40%;
-  background: rgba(0,0,0,0.4);
+  background-color: rgba(95, 105, 131, 0.3);
   margin: 20% auto;
   
 }
