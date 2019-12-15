@@ -11,8 +11,7 @@ body {
   background-position: center;
   background-size: cover;
   font-family: sans-serif;
-  transition: background-image 0.4s ease-in-out;
-  animation: slide 20s linear infinite;
+
 
 }
 
